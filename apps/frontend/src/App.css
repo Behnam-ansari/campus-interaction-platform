@@ -1,0 +1,263 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  font-family: Arial, sans-serif;
+  background: #f6f7fb;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.app-hero {
+  padding: 28px 32px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #111827, #374151);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+}
+
+.app-hero h1 {
+  margin: 0;
+  color: white;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+button {
+  padding: 10px 16px;
+  border: 1px solid #222;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f0f0f0;
+}
+
+.section {
+  margin-bottom: 28px;
+}
+
+.section-card {
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.section-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.4px;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+  max-width: 520px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.form label {
+  display: grid;
+  gap: 6px;
+  font-weight: bold;
+}
+
+.form input,
+.form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.room-card {
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+}
+
+.room-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.room-card-header h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.status-buttons {
+  display: grid;
+  gap: 4px;
+  min-width: 90px;
+}
+
+.status-button {
+  padding: 5px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  background: #f5f5f5;
+  color: #777;
+}
+
+.status-button.available.active {
+  background: #d1fae5;
+  color: #065f46;
+  border-color: #065f46;
+}
+
+.status-button.occupied.active {
+  background: #fee2e2;
+  color: #991b1b;
+  border-color: #991b1b;
+}
+
+.status-button:hover {
+  background: #eee;
+}
+
+.status-button.available.active:hover {
+  background: #d1fae5;
+}
+
+.status-button.occupied.active:hover {
+  background: #fee2e2;
+}
+
+.edit-room-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.edit-room-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: bold;
+}
+
+.edit-room-form input {
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.room-actions {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.room-actions button {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.danger-button {
+  border-color: #991b1b;
+  color: #991b1b;
+}
+
+.danger-button:hover {
+  background: #fee2e2;
+}
+
+.subsection {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.subsection h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.appointment-list {
+  display: grid;
+  gap: 12px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.appointment-item {
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.appointment-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.appointment-actions button {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.edit-appointment-form {
+  display: grid;
+  gap: 10px;
+}
+
+.edit-appointment-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: bold;
+}
+
+.edit-appointment-form input,
+.edit-appointment-form select {
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.event-list {
+  padding-left: 20px;
+}
+
+.event-list li {
+  margin-bottom: 6px;
+}
+
+.error {
+  color: #b91c1c;
+  font-weight: bold;
+}

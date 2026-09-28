@@ -1,0 +1,21 @@
+# Dokumentation der KI-Nutzung
+
+| Phase im Arbeitsprozess | Arbeitsschritt bzw. Zweck | KI-Tool | Betroffene Teile der Arbeit | Anmerkungen |
+| --- | --- | --- | --- | --- |
+| Architekturplanung | Unterstützung bei der Auswahl der Architekturform und bei der Strukturierung des Projekts | ChatGPT | ADR 001, Projektstruktur, README | Die Vorschläge wurden kritisch geprüft und an die Rahmenbedingungen des Semesterprojekts angepasst. Die Entscheidung für einen modularen Monolithen wurde eigenständig bewertet und im ADR begründet. |
+| Projekt-Setup | Unterstützung bei der Einrichtung der Monorepo-Struktur, npm Workspaces und der grundlegenden Backend-/Frontend-Struktur | ChatGPT | Projektstruktur, package.json, Backend-Skeleton, Frontend-Skeleton | Die vorgeschlagene Struktur wurde manuell übernommen, geprüft und an das konkrete Projekt angepasst. |
+| Infrastruktur-Setup | Unterstützung bei der Erstellung einer lokalen Docker-Compose-Konfiguration | ChatGPT | docker-compose.yml, PostgreSQL, RabbitMQ, README | Die Konfiguration wurde für ein einfaches lokales Setup gewählt. PostgreSQL und RabbitMQ wurden lokal gestartet und manuell getestet. |
+| Backend-Implementierung | Unterstützung bei der Implementierung und Anpassung der REST-Endpunkte, Services und Repositories | Copilot / ChatGPT | Room-Modul, Appointment-Modul, REST-Endpunkte, Validierung, PostgreSQL-Repositories | Codevorschläge wurden nicht unverändert übernommen. Sie wurden manuell angepasst, getestet und bei Fehlern korrigiert. Fachliche Logik wie Validierung und Zeitkonfliktprüfung wurde im Service-Layer gehalten. |
+| Datenbankintegration | Unterstützung bei der Anbindung von PostgreSQL und beim Aufbau des Datenbankschemas |  Copilot / ChatGPT | Datenbankverbindung, Schema, Repository-Schicht | Die SQL-Zugriffe wurden in der Repository-Schicht gekapselt. Das Schema wurde an die benötigten Entitäten Räume und Termine angepasst und mit der laufenden Anwendung geprüft. |
+| GraphQL-Integration | Unterstützung bei der Definition des GraphQL-Schemas und der Resolver |  Copilot / ChatGPT | GraphQL-Schema, Resolver, aggregierte Abfragen | GraphQL wurde als zusätzliche API-Schicht umgesetzt. Fehler bei der Abfrage `freeRoomsInTimeRange` wurden im Test erkannt und durch Wiederverwendung der bestehenden Konfliktlogik korrigiert. |
+| Echtzeit- und Messaging-Funktionen | Unterstützung bei der Integration von WebSocket und RabbitMQ |  Copilot / ChatGPT | WebSocket-Server, Realtime-Modul, RabbitMQ Publisher, Notification Consumer | Die Umsetzung wurde als einfacher Prototyp gehalten. WebSocket sendet Live-Events an verbundene Clients. RabbitMQ veröffentlicht Terminereignisse an einen Notification Consumer. |
+| Frontend-Implementierung | Unterstützung beim Aufbau eines einfachen React-Dashboards mit Formularen und Live-Updates | ChatGPT | React Frontend, Apollo Client, WebSocket-Anbindung, Formulare, UI-Logik | Das Frontend wurde bewusst einfach gehalten, damit die wichtigsten Funktionen nachvollziehbar demonstriert werden können: Räume anzeigen, Termine erstellen und Live-Events empfangen. |
+| Testen | Unterstützung beim Aufbau und bei der Fehlersuche der Integrationstests |  Copilot / ChatGPT | Jest, Supertest, Test-Utilities, REST-/GraphQL-/WebSocket-/E2E-Tests | Die Tests wurden gegen die echte Express-Anwendung und PostgreSQL ausgeführt. Fehler aus den Tests wurden analysiert und die Implementierung entsprechend verbessert. |
+| Dokumentation | Unterstützung bei der Formulierung von Architektur-, API-, Test- und Deployment-Dokumentation | ChatGPT | ADRs, Architekturdiagramm, API-Dokumentation, Testdokumentation, Start- und Deployment-Anleitung | Die Texte wurden an die tatsächlich implementierten Funktionen angepasst. Inhalte wurden geprüft, gekürzt und projektspezifisch ergänzt. |
+
+
+## Hinweis zur KI-Nutzung
+
+Die KI-generierten Vorschläge wurden nicht unverändert übernommen. Alle Vorschläge wurden im Projektkontext geprüft, manuell angepasst, getestet und bei Fehlern überarbeitet.
+
+Die KI wurde vor allem zur Unterstützung bei Strukturierung, Fehlersuche, Dokumentationsentwürfen und Beispielimplementierungen verwendet. Die finale Auswahl der Architektur, die Integration der Komponenten, die Anpassung an das konkrete Projekt und die Bewertung der Ergebnisse wurden eigenständig durchgeführt.
